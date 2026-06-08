@@ -1,6 +1,6 @@
-# Aetheria AI - Interactive Study & Writing Companion
+# Learnmate AI - Interactive Study & Writing Companion
 
-Aetheria AI is a premium, feature-rich single-page web workspace built using Vanilla HTML, CSS, and JavaScript. Powered by the Google Gemini API, it provides specialized tools designed to streamline learning, writing, and analysis, complete with real-time interactive widgets, glassmorphic design, and local browser persistence.
+Learnmate AI is a premium, feature-rich single-page web workspace built using Vanilla HTML, CSS, and JavaScript. Powered by the Google Gemini API, it provides specialized tools designed to streamline learning, writing, and analysis, complete with real-time interactive widgets, glassmorphic design, and local browser persistence.
 
 ---
 
@@ -41,7 +41,7 @@ By default, the application will launch automatically at **`http://localhost:300
 
 ### 3. Set up your API Key
 1. Obtain a free key from [Google AI Studio](https://aistudio.google.com/).
-2. Click **API Settings** in the bottom left corner of Aetheria.
+2. Click **API Settings** in the bottom left corner of Learnmate.
 3. Paste your key and click **Save Key**. The status indicator in the bottom-left corner will turn green.
 4. Choose any tool or click **New Freeform Chat** to start creating!
 

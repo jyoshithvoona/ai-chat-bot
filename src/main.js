@@ -210,7 +210,7 @@ function switchMode(mode) {
   dom.toolFormCard.classList.add('hidden');
 
   if (mode === 'welcome') {
-    dom.topTitle.textContent = 'Aetheria AI';
+    dom.topTitle.textContent = 'Learnmate AI';
     dom.welcomeScreen.classList.remove('hidden');
     dom.inputBar.classList.add('hidden');
     return;
@@ -219,7 +219,7 @@ function switchMode(mode) {
   dom.welcomeScreen.classList.add('hidden');
 
   if (mode === 'chat') {
-    dom.topTitle.textContent = 'Chat with Aetheria';
+    dom.topTitle.textContent = 'Chat with Learnmate';
     dom.inputBar.classList.remove('hidden');
     setTimeout(() => dom.chatInput.focus(), 100);
   } else {
@@ -254,7 +254,7 @@ function addMsg(role, html, isSkeleton = false) {
   div.className = `msg ${role === 'user' ? 'user-msg' : 'ai-msg'}`;
   const avatarCls = role === 'user' ? 'user' : 'ai';
   const avatarTxt = role === 'user' ? 'ME' : 'AI';
-  const nameTxt = role === 'user' ? 'You' : 'Aetheria';
+  const nameTxt = role === 'user' ? 'You' : 'Learnmate';
 
   let body;
   if (isSkeleton) {
@@ -394,7 +394,7 @@ async function handleChatSend() {
   try {
     const history = session.messages.slice(0, -1);
     const tool = TEMPLATES[session.type];
-    const sysInst = tool ? tool.getSystemInstruction(session.values) : 'You are Aetheria, a helpful, friendly AI assistant. Give clear, well-structured answers using Markdown with headers, bold text, and bullet points for readability.';
+    const sysInst = tool ? tool.getSystemInstruction(session.values) : 'You are Learnmate, a helpful, friendly AI assistant. Give clear, well-structured answers using Markdown with headers, bold text, and bullet points for readability.';
     const jsonMode = tool ? (tool.jsonMode || false) : false;
 
     const res = await generateContent({
@@ -454,7 +454,7 @@ function loadSession(id) {
   document.querySelectorAll('.tool-item').forEach(i => i.classList.toggle('active', i.dataset.tool === s.type));
 
   if (s.type === 'chat') {
-    dom.topTitle.textContent = 'Chat with Aetheria';
+    dom.topTitle.textContent = 'Chat with Learnmate';
     dom.inputBar.classList.remove('hidden');
     s.messages.forEach(m => addMsg(m.role === 'user' ? 'user' : 'ai', md(m.parts[0].text)));
   } else {
